@@ -1,7 +1,11 @@
-import router from "./UserRoutes.js";
+import AdsRoute from "./AdsRoute.js";
+import HomeRouter from "./HomeRoutes.js";
+import UserRoute from "./UserRoute.js";
 
 export default function routes(app) {
-    app.use('/', router)
+    app.use('/', HomeRouter)
+    app.use('/users', UserRoute);
+    app.use('/ads', AdsRoute)
 
 
 
